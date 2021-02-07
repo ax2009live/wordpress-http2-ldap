@@ -24,14 +24,14 @@ The WordPress 5.5 docker image with apache2 (http2 &amp; LDAP). The image based 
 	Create WordPress container
 		
 		docker run -d \
-				--restart=always \
-				--name wordpress \
-				-v /root/apache2:/etc/apache2/sites-enabled \
-				-v /root/nginx/wordpress:/var/www/html \
-				-v /root/nginx/certs:/root/nginx/certs \
-				-p 80.:80 -p 443:443 \
-				--network=mynet --ip 172.18.0.20 \
-				ax2009live/wordpress-http2-ldap:5.5
+			--restart=always \
+			--name wordpress \
+			-v /root/apache2:/etc/apache2/sites-enabled \
+			-v /root/nginx/wordpress:/var/www/html \
+			-v /root/nginx/certs:/root/nginx/certs \
+			-p 80.:80 -p 443:443 \
+			--network=mynet --ip 172.18.0.20 \
+			ax2009live/wordpress-http2-ldap:5.5
 		
 	https://172.18.0.20
 		
