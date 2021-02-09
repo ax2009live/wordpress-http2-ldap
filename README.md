@@ -35,12 +35,18 @@ https://hub.docker.com/r/ax2009live/wordpress-http2-ldap
 			ax2009live/wordpress-http2-ldap:5.5
 		
 	https://172.18.0.20
-		
-	/root/apache2:   000-default.conf   default-ssl.conf
-	/root/nginx/certs: fullchain.pem    key.pem
-		
-		
-	default-ssl.conf:
+	
+
+
+https://ax2009live.com/install-the-certificate-automatically-update-every-month/
+
+/root/nginx/certs: fullchain.pem key.pem
+
+/root/apache2: 000-default.conf default-ssl.conf
+
+https://github.com/ax2009live/wordpress-http2-ldap/tree/main/apache2
+
+default-ssl.conf: 
 		
 		SSLEngine on
 		
