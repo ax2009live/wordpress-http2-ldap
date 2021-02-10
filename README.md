@@ -34,7 +34,7 @@ https://hub.docker.com/r/ax2009live/wordpress-http2-ldap
 			--network=mynet --ip 172.18.0.20 \
 			ax2009live/wordpress-http2-ldap:5.5
 		
-	https://172.18.0.20
+	https://host-ip
 	
 
 
@@ -57,4 +57,10 @@ default-ssl.conf:
 		#   SSLCertificateFile directive is needed.
 		SSLCertificateFile	/root/nginx/certs/fullchain.pem
 		SSLCertificateKeyFile   /root/nginx/certs/key.pem
-		Protocols h2  http/1.1 
+		
+	# RemoteIPProxyProtocol On
+	# RemoteIPHeader X-Forwarded-For
+	# RemoteIPInternalProxy 172.18.0.1<proxy ip>
+		# Get the user's real IP address, Delete # on the top three lines
+
+		Protocols h2  http/1.1  
