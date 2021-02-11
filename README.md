@@ -48,10 +48,11 @@ https://github.com/ax2009live/wordpress-http2-ldap/tree/main/apache2
 
 default-ssl.conf: 
 		
-server {
-	……
 
-                SSLEngine on
+
+               server {
+	       …… 
+	       SSLEngine on
 
                 #   A self-signed (snakeoil) certificate can be created by installing
                 #   the ssl-cert package. See
@@ -67,5 +68,4 @@ server {
 		# Get the user's real IP address, Delete # on the top three lines
 
 		Protocols h2  http/1.1 
-	……
-}  
+	……}  
