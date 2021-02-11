@@ -48,14 +48,17 @@ https://github.com/ax2009live/wordpress-http2-ldap/tree/main/apache2
 
 default-ssl.conf: 
 		
-		SSLEngine on
-		
-		#   A self-signed (snakeoil) certificate can be created by installing
-		#   the ssl-cert package. See
-		#   /usr/share/doc/apache2/README.Debian.gz for more info.
-		#   If both key and certificate are stored in the same file, only the
-		#   SSLCertificateFile directive is needed.
-		SSLCertificateFile	/root/nginx/certs/fullchain.pem
+server {
+	……
+
+                SSLEngine on
+
+                #   A self-signed (snakeoil) certificate can be created by installing
+                #   the ssl-cert package. See
+                #   /usr/share/doc/apache2/README.Debian.gz for more info.
+                #   If both key and certificate are stored in the same file, only the
+                #   SSLCertificateFile directive is needed.
+                SSLCertificateFile      /root/nginx/certs/fullchain.pem
 		SSLCertificateKeyFile   /root/nginx/certs/key.pem
 		
 	# RemoteIPProxyProtocol On
@@ -63,4 +66,6 @@ default-ssl.conf:
 	# RemoteIPInternalProxy 172.18.0.1<proxy ip>
 		# Get the user's real IP address, Delete # on the top three lines
 
-		Protocols h2  http/1.1  
+		Protocols h2  http/1.1 
+	……
+}  
