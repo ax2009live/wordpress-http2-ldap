@@ -9,6 +9,7 @@ https://hub.docker.com/r/ax2009live/wordpress-http2-ldap
 		
 	Create database container
 		
+    docker run -d \
                 --restart=always \
                 --name  mariadb \
                 -e  MYSQL_DATABASE=mariadb \
@@ -23,6 +24,7 @@ https://hub.docker.com/r/ax2009live/wordpress-http2-ldap
 					
 	Create WordPress container
 		
+    docker run -d \
                 --restart=always \
                 --name wordpress \
                 -v /root/apache2:/etc/apache2/sites-enabled \
