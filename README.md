@@ -39,7 +39,7 @@ https://hub.docker.com/r/ax2009live/wordpress-http2-ldap
 	
 
 
-https://bb.ax2009live.com/install-the-certificate-automatically-update-every-month/
+http://bb.ax2009live.com/install-the-certificate-automatically-update-every-month/
 
 /root/nginx/certs: fullchain.pem key.pem
 
